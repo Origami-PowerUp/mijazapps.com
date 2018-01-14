@@ -16,9 +16,14 @@
     </body>
     <script>
         $( document ).ready(function() {
- 
-            $('#test').html("ok")
+            var div = $('#test')
+          // .post( url, data, success(data, textStatus, jqXHR), dataType )
+          $.post("https://script.google.com/macros/s/AKfycbxEsdqllz7WWWAmzvc3GeSz3zUKQPM2_Vaf7OOr4SHR/dev",{hello:"world"},function(data){
+              div.html(data)
+          });
+          
  
         });
         </script>
 </html>
+
